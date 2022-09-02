@@ -23,13 +23,13 @@ spec:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
             secretKeyRef:
-              name: mongo-secret
-              key: mongo-user
+              name: mongo-secret # --from file 
+              key: mongo-user # ! variable with this key
         - name: MONGO_INITDB_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mongo-secret
-              key: mongo-password  
+              name: mongo-secret # --from file
+              key: mongo-password  # ! variable with this key
 ---
 apiVersion: v1
 kind: Service
